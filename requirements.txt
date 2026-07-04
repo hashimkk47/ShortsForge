@@ -1,0 +1,3 @@
+# Core dependencies (API mode). See requirements-local.txt for --mode local.
+requests>=2.31
+python-dotenv>=1.0

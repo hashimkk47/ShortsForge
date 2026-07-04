@@ -1,0 +1,18 @@
+-r requirements.txt
+
+# Optional dependencies for --mode local (fully on-device pipeline).
+yt-dlp>=2024.1.1            # Downloader stage
+faster-whisper>=1.0.0      # Transcriber stage (CPU or CUDA)
+opencv-python>=4.8.0       # Face-tracking stage: frame I/O
+mediapipe>=0.10.9          # Face-tracking stage: BlazeFace detector
+
+# Highlight LLM providers — install only the one(s) you use.
+openai>=1.0.0              # LLM_PROVIDER=openai
+google-genai>=1.0.0        # LLM_PROVIDER=gemini
+# LLM_PROVIDER=ollama needs no pip package — just a running Ollama server.
+
+# CUDA Whisper is optional; faster-whisper works on CPU without torch.
+# Install a CUDA build of torch to force GPU transcription:
+# torch>=2.0
+
+# ffmpeg must be installed separately and available on PATH.
